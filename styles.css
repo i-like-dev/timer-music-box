@@ -29,8 +29,16 @@ h1 {
     margin-top: 20px;
 }
 
+.input-container {
+    display: none;
+}
+
+textarea,
 #time-input,
-#music-input {
+#interval-input,
+#music-input,
+#tts-time-input,
+#tts-interval-input {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -83,6 +91,14 @@ h1 {
 
 .delete-button:hover {
     background-color: #d32f2f;
+}
+
+#transcription {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f1f1f1;
 }
 
 audio {
