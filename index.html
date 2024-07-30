@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="a3huw-b4swz-001.ico" rel="shortcut icon"/>
     <title>時間音樂盒</title>
-    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,10 +13,38 @@
             <!-- 這裡將顯示所有的定時器 -->
         </div>
         <div class="form-container">
-            <input type="time" id="time-input" required>
-            <input type="file" id="music-input" accept="audio/*" required>
+            <div>
+                <input type="radio" id="tts-option" name="mode" value="tts" checked>
+                <label for="tts-option">文字轉語音 (TTS)</label>
+                <input type="radio" id="upload-option" name="mode" value="upload">
+                <label for="upload-option">上傳音頻文件</label>
+            </div>
+            <div id="tts-container" class="input-container">
+                <textarea id="text-input" placeholder="輸入文本" rows="4"></textarea>
+                <div>
+                    <input type="radio" id="tts-time-radio" name="tts-time-type" value="time" checked>
+                    <label for="tts-time-radio">設定具體時間</label>
+                    <input type="radio" id="tts-interval-radio" name="tts-time-type" value="interval">
+                    <label for="tts-interval-radio">設定間隔時間</label>
+                </div>
+                <input type="time" id="tts-time-input" placeholder="設定時間">
+                <input type="number" id="tts-interval-input" placeholder="間隔 (分鐘)" min="1">
+            </div>
+            <div id="upload-container" class="input-container">
+                <input type="file" id="music-input" accept="audio/*">
+                <div>
+                    <input type="radio" id="time-radio" name="time-type" value="time" checked>
+                    <label for="time-radio">設定具體時間</label>
+                    <input type="radio" id="interval-radio" name="time-type" value="interval">
+                    <label for="interval-radio">設定間隔時間</label>
+                </div>
+                <input type="time" id="time-input" placeholder="設定時間">
+                <input type="number" id="interval-input" placeholder="間隔 (分鐘)" min="1">
+            </div>
             <button id="add-timer">新增定時器</button>
         </div>
+
+
         <audio id="alarm-sound"></audio>
     </div>
     <script src="script.js"></script>
