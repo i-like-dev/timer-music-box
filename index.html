@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="a3huw-b4swz-001.ico" rel="shortcut icon"/>
+    <title>時間音樂盒</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>時間音樂盒</h1>
+        <div id="timers">
+            <!-- 這裡將顯示所有的定時器 -->
+        </div>
+        <div class="form-container">
+            <input type="time" id="time-input" required>
+            <input type="file" id="music-input" accept="audio/*" required>
+            <button id="add-timer">新增定時器</button>
+        </div>
+        <audio id="alarm-sound"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
